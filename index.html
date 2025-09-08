@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jae Flowers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="#home" class="logo" aria-label="Jae Flowers Home">
+      <img src="Jaelogo.png" alt="Jae Flowers Logo" class="logo-img" />
+      <span class="pink">Jae</span><span class="yellow"> Flowers</span>
+    </a>
+
+    <!-- Hamburger menu -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav class="navbar" id="navbar">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#featured">Featured</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="contact-info">
+      <span>2885 St Clair Ave E, East York, Toronto</span>
+      <span class="phone">(647) 745-0329</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>
+        <span>Beautiful Flowers</span> <br>
+        <span class="highlight">For Everyday</span>
+      </h1>
+      <p>Fresh floral arrangements, custom designs, and special occasions</p>
+      <div class="hero-buttons">
+        <a href="https://instagram.com/jaeflowers28" target="_blank" rel="noopener noreferrer" class="btn pink-btn">
+          Visit us on Instagram @jaeflowers28
+        </a>
+        <a href="#gallery" class="btn white-btn">View Pricing & Gallery</a>
+      </div>
+      <div class="features">
+        <span>🌱 Family Owned</span>
+        <span>🌼 Fresh & Local</span>
+        <span>🎨 Custom Arrangements</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Floral Services</h2>
+    <p>From celebrations to family events and daily joy, we design beautiful floral arrangements that make every moment memorable</p>
+    <div class="service-cards">
+      <div class="card">
+        <h3>🎉 Special Events</h3>
+        <p>Birthday parties, anniversaries, and celebrations with stunning floral arrangements.</p>
+      </div>
+      <div class="card">
+        <h3>🏡 Daily Arrangements</h3>
+        <p>Fresh flowers for your home or office, and seasonal arrangements to brighten your space.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 Custom Creations</h3>
+        <p>Personalized floral designs tailored for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Arrangements -->
+  <section id="featured" class="featured">
+    <h2>Featured Arrangements</h2>
+    <p>Popular floral arrangements, made fresh daily</p>
+    <div class="featured-cards">
+      <div class="featured-card">
+        <h3>Florist's Choice</h3>
+        <p>Florist will create something beautiful for you with fresh blooms.</p>
+        <span class="price">Starting from $40</span>
+      </div>
+      <div class="featured-card">
+        <h3>Seasonal Arrangement</h3>
+        <p>Seasonal flowers arranged to reflect the time of year.</p>
+        <span class="price">Starting from $30</span>
+      </div>
+      <div class="featured-card">
+        <h3>Potted Plants</h3>
+        <p>Long-lasting potted plants perfect for home or office.</p>
+        <span class="price">Starting from $15</span>
+      </div>
+      <div class="featured-card">
+        <h3>Premium Bouquet</h3>
+        <p>Large arrangements and bouquets for your most special occasions.</p>
+        <span class="price">Starting from $60</span>
+      </div>
+    </div>
+  </section>
+<!-- Gallery -->
+<section id="gallery" class="gallery">
+  <h2>Our Gallery</h2>
+  <p>Choose from classic designs to custom arrangements</p>
+  <div class="image-grid">
+    <div class="gallery-item"><img src="CD77.webp" alt="Romantic red roses bouquet"></div>
+    <div class="gallery-item"><img src="CD70.jpg" alt="Soft pink and white bouquet"></div>
+    <div class="gallery-item"><img src="CD75.jpg" alt="Sunflowers and daisies arrangement"></div>
+    <div class="gallery-item"><img src="CD69.jpg" alt="Colorful mixed flower bouquet"></div>
+    <div class="gallery-item"><img src="CD78.jpg" alt="Spring floral vase"></div>
+    <div class="gallery-item"><img src="CD76.jpg" alt="Fresh greenery bouquet"></div>
+    <div class="gallery-item"><img src="CD74.webp" alt="Bright summer flowers arrangement"></div>
+    <div class="gallery-item"><img src="CD72.jpg" alt="Elegant orchid centerpiece"></div>
+    <div class="gallery-item"><img src="CD71.jpg" alt="Classic roses display"></div>
+    <div class="gallery-item"><img src="CD73.webp" alt="Wedding floral design"></div>
+    <div class="gallery-item"><img src="CD2.jpg" alt="Pink roses and tulips bouquet"></div>
+    <div class="gallery-item"><img src="CD55.webp" alt="Blue flowers"></div>
+  </div>
+</section>
+  <!-- Lightbox Script -->
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.createElement('div');
+    lightbox.classList.add('lightbox');
+    document.body.appendChild(lightbox);
+
+    const img = document.createElement('img');
+    const closeBtn = document.createElement('a');
+    closeBtn.href = "#";
+    closeBtn.classList.add('lightbox-close');
+    closeBtn.innerHTML = "&times;";
+
+    const prevArrow = document.createElement('div');
+    prevArrow.classList.add('lightbox-arrow', 'left');
+    prevArrow.innerHTML = "&#10094;";
+
+    const nextArrow = document.createElement('div');
+    nextArrow.classList.add('lightbox-arrow', 'right');
+    nextArrow.innerHTML = "&#10095;";
+
+    lightbox.appendChild(img);
+    lightbox.appendChild(closeBtn);
+    lightbox.appendChild(prevArrow);
+    lightbox.appendChild(nextArrow);
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      if (index < 0) index = galleryItems.length - 1;
+      if (index >= galleryItems.length) index = 0;
+      img.src = galleryItems[index].src;
+      currentIndex = index;
+    }
+
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        lightbox.style.display = "flex";
+        showImage(index);
+      });
+    });
+
+    prevArrow.addEventListener('click', () => {
+      showImage(currentIndex - 1);
+    });
+
+    nextArrow.addEventListener('click', () => {
+      showImage(currentIndex + 1);
+    });
+
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === "flex") {
+        if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+        if (e.key === "ArrowRight") showImage(currentIndex + 1);
+        if (e.key === "Escape") lightbox.style.display = "none";
+      }
+    });
+  </script>
+
+  <!-- About / CTA -->
+  <section id="about" class="cta">
+    <h2>Ready to Brighten Someone’s Day?</h2>
+    <p>Creating the perfect floral arrangement that speaks from the heart ♥</p>
+    <div class="cta-contact">
+      <span>🏪 2885 St Clair Ave E, East York, ON M4B 1N4</span>
+      <span>📞 647-745-0329</span>
+      <span>📧 jaeflowerstclair@gmail.com</span>
+      <span>🕒 Mon–Sun: 8:30AM–8:30PM</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-brand">
+      <strong>Jae Flowers</strong>
+      <p>© 2025 by Jae Flowers. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Get in Touch</h4>
+      <p>🏪 2885 St Clair Ave E, East York, ON M4B 1N4</p>
+      <p>📞 647-745-0329 (Call/Text)</p>
+      <p>📧 jaeflowerstclair@gmail.com</p>
+      <p>🕒 Mon–Sun: 8:30AM–8:30PM</p>
+    </div>
+  </footer>
+
+  <!-- JS for menu toggle -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    toggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
